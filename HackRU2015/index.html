@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Algorithmic tl;dr</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+					<span class="icon major fa-cloud"></span>
+					<h1><strong>Algorithmic</strong> tl;dr<br/></h1>
+					<p>Made at HackRU 2015</p>
+					<ul class="actions">
+						<li><a href="#one" class="button scrolly">More</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1 special">
+				<div class="container">
+					<header class="major">
+								<h2>Try it out</h2>
+							</header>
+					<div class="row 150%">
+						<div class="6u 12u$(medium)">
+							<textarea name="input" id="input" placeholder="Enter some text to be shortened..." rows="10"></textarea>
+						</div>
+						<div class="6u$ 12u$(medium) important(medium)" id="output">
+							<h3><h3>
+						</div>
+					</div>
+					<br>
+					<h2 id="old_length" class="align-left"></h2>
+					<h2 id="new_length" style="color: #54FC42" class="align-left"></h2> 
+					<ul class="actions vertical">
+						<li><a class="button special fit" onClick="go();">Process</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2">
+
+				<div class="container">
+					<div class="row 150%">
+						<div class="6u 12u$(medium)">
+
+							<ul class="major-icons">
+								<li><span class="icon style1 major fa-code"></span></li>
+								<li><span class="icon style2 major fa-bolt"></span></li>
+								<li><span class="icon style4 major fa-cog"></span></li>
+								<li><span class="icon style5 major fa-desktop"></span></li>
+							</ul>
+						</div>
+						<div class="6u$ 12u$(medium)">
+							<header class="major">
+								<h2>About our hack...</h2>
+							</header>
+
+							<p><strong>Automatic tl;dr</strong> is an Auto Summarization Model adapted from a research paper published through the <a href="http://academic.research.microsoft.com/Publication/61454589/an-algorithm-for-summarization-of-paragraph-up-to-one-third-with-the-help-of-cue-words-comparison">International Journal of Advanced Computer Science and Applications</a> in 2014.</p>
+
+							<p>Our team came across this paper through Microsoft's Academic Research portal and thought it would be interesting to see how the algorithm performed since it had yet to be implemented for general use.</p>
+
+							<p>The algorithm employs simple Naturla Language Processing techniques in order to assign priority to sentences based off common adverbs, nouns, adjectives, and verbs. It additionally attempts to maximize the amount of salient information retained by ignoring stop words and taking note of numbers mentioned. Through a series of computations and comparisons the algorithm ranks the sentences based off these metrics and attempts to return a paragraph of optimal length and clarity.</p>
+
+							<p>In our preliminary testing we found that in general the algorithm reduced paragraphs by roughly 60%, and maintained a sentiment score very close to the original text.</p>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		
+		
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>Designed by: Sean Kallungal, John French, and Yoonshik Hong</li>
+				</ul>
+			</section>
+
+			<script type="text/javascript" src="lexer.js"></script>
+			<script type="text/javascript" src="lexicon.js_"></script>
+			<script type="text/javascript" src="POSTagger.js"></script>
+			<script type="text/javascript" src="stop_list.js"></script>
+			<script type="text/javascript" src="summarize.js"></script>
+
+			<script>
+				function go(){
+					var arr = autoSummarize(document.getElementById("input").value);
+					document.getElementById("output").innerHTML = arr[0];
+					document.getElementById("old_length").innerHTML = "Original Length: " + arr[1];
+					document.getElementById("new_length").innerHTML = "New Length: " + arr[2];
+				}
+			</script>
+
+	</body>
+</html>
