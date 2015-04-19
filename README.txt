@@ -1,34 +1,7 @@
-Photon by HTML5 UP
-html5up.net | @n33co
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Automatic tl;dr is an Auto Summarization Model adapted from a research paper published through the International Journal of Advanced Computer Science and Applications in 2014.
 
+Our team came across this paper through Microsoft's Academic Research portal and thought it would be interesting to see how the algorithm performed since it had yet to be implemented for general use.
 
-A simple (gradient-heavy) single pager that revisits a style I messed with on two
-previous designs (Tessellate and Telephasic). Fully responsive, built on Sass,
-and, as usual, loaded with an assortment of pre-styled elements. Have fun! :)
+The algorithm employs simple Naturla Language Processing techniques in order to assign priority to sentences based off common adverbs, nouns, adjectives, and verbs. It additionally attempts to maximize the amount of salient information retained by ignoring stop words and taking note of numbers mentioned. Through a series of computations and comparisons the algorithm ranks the sentences based off these metrics and attempts to return a paragraph of optimal length and clarity.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = Not included)
-
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
-
-AJ
-n33.co @n33co dribbble.com/n33
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		CSS3 Pie (css3pie.com)
-		background-size polyfill (github.com/louisremi)
-		Skel (getskel.com)
+In our preliminary testing we found that in general the algorithm reduced paragraphs by roughly 60%, and maintained a sentiment score very close to the original text.
