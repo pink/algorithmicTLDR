@@ -75,11 +75,11 @@
 								<h2>About our hack...</h2>
 							</header>
 
-							<p><strong>Automatic tl;dr</strong> is an Auto Summarization Model adapted from a research paper published through the <a href="http://academic.research.microsoft.com/Publication/61454589/an-algorithm-for-summarization-of-paragraph-up-to-one-third-with-the-help-of-cue-words-comparison">International Journal of Advanced Computer Science and Applications</a> in 2014.</p>
+							<p><strong>Algorithmic tl;dr</strong> is an Auto Summarization Model adapted from a research paper published through the <a href="http://academic.research.microsoft.com/Publication/61454589/an-algorithm-for-summarization-of-paragraph-up-to-one-third-with-the-help-of-cue-words-comparison">International Journal of Advanced Computer Science and Applications</a> in 2014.</p>
 
 							<p>Our team came across this paper through Microsoft's Academic Research portal and thought it would be interesting to see how the algorithm performed since it had yet to be implemented for general use.</p>
 
-							<p>The algorithm employs simple Naturla Language Processing techniques in order to assign priority to sentences based off common adverbs, nouns, adjectives, and verbs. It additionally attempts to maximize the amount of salient information retained by ignoring stop words and taking note of numbers mentioned. Through a series of computations and comparisons the algorithm ranks the sentences based off these metrics and attempts to return a paragraph of optimal length and clarity.</p>
+							<p>The algorithm employs simple Natural Language Processing techniques in order to assign priority to sentences based off common adverbs, nouns, adjectives, and verbs. It additionally attempts to maximize the amount of salient information retained by ignoring stop words and taking note of numbers mentioned. Through a series of computations and comparisons the algorithm ranks the sentences based off these metrics and attempts to return a paragraph of optimal length and clarity.</p>
 
 							<p>In our preliminary testing we found that in general the algorithm reduced paragraphs by roughly 60%, and maintained a sentiment score very close to the original text.</p>
 
@@ -115,8 +115,8 @@
 				function go(){
 					var arr = autoSummarize(document.getElementById("input").value);
 					document.getElementById("output").innerHTML = arr[0];
-					document.getElementById("old_length").innerHTML = "Original Length: " + arr[1];
-					document.getElementById("new_length").innerHTML = "New Length: " + arr[2];
+					document.getElementById("old_length").innerHTML = "Original Length: " + arr[1] + " sentence(s).";
+					document.getElementById("new_length").innerHTML = "New Length: " + arr[2] + " sentence(s).";
 				}
 			</script>
 
