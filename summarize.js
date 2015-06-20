@@ -4,8 +4,6 @@ function autoSummarize(input){
 	var testWords = testString.replace(/[^\w\s]|_/g, function ($1) { return ' ' + $1 + ' ';}).replace(/[ ]+/g, ' ').split(' ');
 	var lexer = new Lexer();
 	var tagger = new POSTagger();
-	var start = new Date().getTime();
-	var end = new Date().getTime();
 	var frequency_table = {};
 	var word_list = {};
 	var total_frequency = 0;
