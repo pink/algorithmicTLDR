@@ -6,4 +6,4 @@ The algorithm employs simple Naturla Language Processing techniques in order to 
 
 In our preliminary testing we found that in general the algorithm reduced paragraphs by roughly 60%, and maintained a sentiment score very close to the original text.
 
-Check it out here: http://kallungal.me/summarize.html.
+Check it out here: http://skallung.github.io.
